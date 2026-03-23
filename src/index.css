@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Manrope', 'Segoe UI', sans-serif;
+  --font-display: 'Sora', 'Segoe UI', sans-serif;
+
+  --color-brand-orange: #c34a2c;
+  --color-brand-black: #0f0f10;
+  --color-brand-white: #fefcfb;
+  --color-brand-cream: #fff5f1;
+  --color-brand-gray-100: #ddd7d2;
+  --color-brand-gray-200: #b4aba4;
+  --color-brand-gray-300: #8d857f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(circle at 15% 10%, rgba(195, 74, 44, 0.14), transparent 32%),
+    radial-gradient(circle at 85% 90%, rgba(195, 74, 44, 0.1), transparent 35%),
+    var(--color-brand-black);
+  color: var(--color-brand-white);
+}
+
+.section-container {
+  @apply mx-auto w-full max-w-7xl;
+}
+
+.section-space {
+  @apply px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-24;
+}
+
+.section-dark {
+  @apply bg-brand-black;
+}
+
+.section-light {
+  @apply bg-brand-cream text-brand-black;
+}
+
+.section-heading-dark {
+  @apply font-display text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl;
+}
+
+.section-heading-light {
+  @apply font-display text-3xl font-extrabold leading-tight tracking-tight text-brand-black sm:text-4xl lg:text-5xl;
+}
